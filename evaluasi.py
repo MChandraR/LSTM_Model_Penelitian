@@ -5,12 +5,17 @@ import numpy as np
 import torch
 import random
 from util import create_sequences
+import json
 
-input_size = 1
-hidden_size = 50
-num_layers = 2
-seq_length = 3
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
+
+with open('config.json', 'r') as config:
+    config = json.load(config)
+    input_size = config["input_size"]
+    hidden_size = config["hidden_size"]
+    num_layers = config["num_layers"]
+    seq_length = config["seq_length"]
 
 file_path = './dataset.xlsx'
 data = pd.read_excel(file_path)
