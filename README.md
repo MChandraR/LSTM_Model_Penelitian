@@ -16,4 +16,7 @@
  4. Lakukan evaluasi atau uji coba terhadap prediksi dengan perintah
  
       python evaluasi.py
+
+
+Ubah configurasi Model / Parameter pada file config.json
    
